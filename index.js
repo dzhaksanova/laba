@@ -71,7 +71,7 @@ function aggregate(json_meetup, json_eventbrite) {
 	var merged_array = [];
 
 	for (var i = 0; i < json_meetup.length; i++) {
-		//NEW - Если дата присутствует в поле, то будет "true", иначе будут значения "undefined" в массиве 
+		
 		if (json_meetup[i].local_date && json_meetup[i].local_time) { 
 			var item = {
 				'name': json_meetup[i].name,
@@ -84,7 +84,7 @@ function aggregate(json_meetup, json_eventbrite) {
 	}
 
 	for (var i = 0; i < json_eventbrite.length; i++) {
-		//NEW - Если дата присутствует в поле, то будет "true", иначе будут значения "undefined" в массиве 
+		
 		if (json_eventbrite[i].start.local) { 
 			var item = {
 				'name': json_eventbrite[i].name.text,
@@ -147,7 +147,7 @@ function html() {
 html();
 
 
-Если все правильно, то она должна добавиться в файле package.json. На всякий случай сохраните ваши файлы.
+
 
 app.use('/public', express.static('public'));
 
